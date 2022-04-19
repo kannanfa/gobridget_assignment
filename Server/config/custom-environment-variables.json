@@ -1,0 +1,10 @@
+{
+    "app":{
+        "port":"IMAGE_MICROSERVICE_PORT"
+    },
+    "api":{
+        "NASA_IMAGE":{
+            "value":"NASA_API_PRODUCTION_KEY"
+        }
+    }
+  }

@@ -1,0 +1,42 @@
+{
+  "name": "nasa-image-service",
+  "version": "0.0.1",
+  "description": "Package used to search nasa image data",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run build && mocha dist/**/__test__/*",
+    "build": "babel src -d dist --copy-files",
+    "start": "nodemon --exec node_modules/.bin/babel-node src/index.js",
+    "prod": "node ./dist/index.js"
+  },
+  "keywords": [
+    "nasa",
+    "image"
+  ],
+  "author": "kannanfa@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "apollo-server-core": "^3.6.7",
+    "apollo-server-express": "^3.6.7",
+    "chai": "^4.3.6",
+    "config": "^3.3.7",
+    "express": "^4.17.3",
+    "express-http-context": "^1.2.4",
+    "graphql": "^16.3.0",
+    "mocha": "^9.2.2",
+    "node-fetch": "^2.6.7",
+    "uuid": "^8.3.2",
+    "winston": "^3.7.2",
+    "winston-daily-rotate-file": "^4.6.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.9",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/register": "^7.17.7",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "nodemon": "^2.0.15"
+  }
+}

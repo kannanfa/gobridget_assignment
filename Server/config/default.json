@@ -1,0 +1,15 @@
+{
+    "service": "nasa-image-service",
+    "app": {
+        "port": 9000,
+        "defaultNetworkTimeout": 30
+    },
+    "NASA_IMAGE": {
+        "baseURL": "https://images-api.nasa.gov",
+        "authKey": "api_key",
+        "value": "Xjy6ph88gkQI3bZoJOId3Cj5YLsuyeQRbUZ3P8RK",
+        "endPoints": {
+            "search": "/search"
+        }
+    }
+}

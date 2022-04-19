@@ -1,0 +1,8 @@
+.sidelayout{
+    border-right: 2px solid var(--gray2);
+    min-height: 100vh;
+}
+.navBarlayout{
+    border-bottom: 2px solid var(--gray2);
+    height: 60px;
+}
