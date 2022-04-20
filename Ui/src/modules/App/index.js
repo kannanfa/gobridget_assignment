@@ -10,9 +10,9 @@ import {NavBarContainer, MainContainer } from "modules/App/Containers";
  * @returns {Component} 
  */
 const App = ({children}) =>{
-  const userInfo = {loginId:"safavieh", name:"safavieh"};
+  const userInfo = {loginId:"kannan", name:"kannan"};
  
-    return <div className="row">
+    return <div className="row" data-testid={`APP-CONTAINER-INNER`}>
             <UserContextProvider value={userInfo}>
                 <MainContainer>
                 <NavBarContainer></NavBarContainer>

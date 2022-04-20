@@ -1,12 +1,15 @@
-import assert from 'chai'
+import assert, { expect } from 'chai'
 import logger from 'corelib/logger'
 
-describe('Chef test', function(){
+describe('Logger Test', function(){
    
-    let chef = logger;
     
-    it('Check logger init', function(){
-        logger.should.have.property('info')
+    it('should logger init', function(){
+        const types = ["transport", "inbound", "info", "error", "debug", "trace"];
+        for (let i = 0; i < types.length; i++) {
+            const type = types[i];
+                  expect(logger).to.have.property(type);
+        }
     })
  
     

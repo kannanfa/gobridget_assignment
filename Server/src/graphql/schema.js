@@ -2,6 +2,8 @@ import { gql } from 'apollo-server-express';
 
 import ImageSchema from './Image/schema.js';
 
+
+// It will combain all the avaliable schema
 const linkSchema = gql`
   type Query {
     _: Boolean

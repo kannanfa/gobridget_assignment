@@ -6,10 +6,19 @@ import httpContext from 'express-http-context';
 import logger from 'corelib/logger';
 
 
+/** Graphql Singleton class */
 class Graphql{
+  
+  // Common server variable 
   server=null
   constructor(){
   }
+
+  
+/** getPlugins - this method used to register workflow plugins
+ * with the help of this plugins we can debug the errors easily
+ */
+  
   getPlugins = () =>{
 
     const myPlugin = {
@@ -50,14 +59,18 @@ class Graphql{
     return myPlugin;
     
   }
+
+  /** createServer -  Used to grate graphql server
+   **/
+  
   createServer=() =>{
     const myPlugin = this.getPlugins();
     this.server = new ApolloServer({
-      typeDefs,
-      resolvers,
-      introspection: true,
-      playground: true,
-      context: ({ req }) => {
+      typeDefs,  // All the tye definition  
+      resolvers, // All the resolvers
+      introspection: true, // It is enabled for development purpose
+      playground: true, // It will help to test the graphql APIs
+      context: ({ req }) => {  // it will help us to send common contex to all the queries and mutations
         const uuid =  uuidv4()
         httpContext.set('uuid', uuid)
         return { uuid };

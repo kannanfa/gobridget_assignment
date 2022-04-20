@@ -21,7 +21,7 @@ import { BrowserRouter  } from "react-router-dom";
  */
 function bootstrap() {
   return (
-    <div className="container-fluid">
+    <div className="container-fluid" data-testid={`APP-CONTAINER`}>
       <Provider store={Storage}>
         <ErrorBoundary>
         <BrowserRouter>

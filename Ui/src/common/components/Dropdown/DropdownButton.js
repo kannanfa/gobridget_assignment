@@ -13,6 +13,7 @@ const index = ({ButtonText}) =>{
         role="button"
         data-bs-toggle="dropdown"
         aria-expanded="false"
+        data-testid={`dropdown-link`}
       >
         {ButtonText} <i className="fa-regular fa-circle-user ms-2"></i>
       </a>

@@ -3,10 +3,13 @@ import DailyRotateFile from "winston-daily-rotate-file";
 import config from "config";
 import httpContext from "express-http-context";
 
+/** Logger - This class help us for logging mechanism  */
 class Logger {
-  types = ["transport", "inbound", "info", "error", "debug", "trace"];
+  types = ["transport", "inbound", "info", "error", "debug", "trace"]; // list of log methods
   serviceName = config?.service;
   loggerObj = {};
+
+  // Initializing  -  all type of log methods 
   constructor() {
     const { types, serviceName } = this;
     for (let i = 0; i < types.length; i++) {
@@ -29,6 +32,12 @@ class Logger {
     }
     return this;
   }
+
+  /**
+   * getTransport - This function will return the daily rotate configuration for log files
+   * @param {Sting} logType - type of log  transport | inbound | info | error | debug | trace
+   * @returns 
+   */
   getTransport = (logType) => {
     const { service } = config;
     return new DailyRotateFile({
@@ -40,6 +49,14 @@ class Logger {
       level: "info",
     });
   };
+
+
+
+  /**
+   * getLogtype - This function will return all the Initialized log functions
+   * @returns 
+   */
+
   getLogtype = () => {
     const { types } = this;
     let logs = {};

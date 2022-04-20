@@ -5,7 +5,7 @@
  */
 const MainContainer = ({ children }) => {
   return (
-    <div className="col p-0">
+    <div className="col p-0" data-testid={`main-container`}>
       <div className="row" >
           {children}
       </div>

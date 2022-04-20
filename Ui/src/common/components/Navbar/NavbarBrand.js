@@ -2,7 +2,7 @@ import logo from "assets/images/gobridget.png";
 
 const index = () => {
     return (
-      <a className="navbar-brand" href="#home">
+      <a className="navbar-brand" href="#home"  data-testid={`navbar-brand`}>
         <img
           src={logo}
           alt="logo"

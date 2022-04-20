@@ -1,0 +1,29 @@
+{
+    "name": "Kannan",
+    "role":"Manager",
+    "dropdownMenu": [
+        {
+            "type": "link",
+            "title": "Account Settings",
+            "url": null,
+            "id": "account-setting",
+            "icon": "account",
+            "hasAlert": false
+        },
+        {
+            "type": "link",
+            "title": "User Management",
+            "url": null,
+            "id": "user-management",
+            "icon": "user",
+            "hasAlert": false
+        },
+        {
+            "title": "Logout",
+            "url": null,
+            "id": "Language",
+            "icon": "",
+            "hasAlert": false
+        }
+    ]
+}

@@ -12,7 +12,7 @@ import DropdownList from "./DropdownList";
  */
 const index = ({ name, dropdownMenu }) => {
   return (
-    <ul className="navbar-nav">
+    <ul className="navbar-nav"  data-testid={`dropdown-list`}>
       <li className="nav-item dropdown">
         <DropdownButton ButtonText={name}></DropdownButton>
         <DropdownList data={dropdownMenu}></DropdownList>

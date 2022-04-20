@@ -31,7 +31,7 @@ const DropdownList = ({data=[]}) =>{
     return (
         <ul className="dropdown-menu dropdown-menu-lg-end" aria-labelledby="navbarDarkDropdownMenuLink">
             {data.map((item, index)=>{
-                return <DropdownListItem title={item.title} id={item.id} url={item.url}  key={`DropdownListItem-${item.id}`}></DropdownListItem>})}
+                return <DropdownListItem  data-testid={`dropdown-list-item-${index}`} title={item.title} id={item.id} url={item.url}  key={`DropdownListItem-${item.id}`}></DropdownListItem>})}
 
         </ul>)
 }

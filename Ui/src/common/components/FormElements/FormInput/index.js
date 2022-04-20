@@ -11,16 +11,17 @@ const FormInput = (props) => {
 
   return (
     <div className="formInput">
-        <label htmlFor="search" class="visually-hidden">Search</label>
+        <label data-testid={`label-${props.name}`} htmlFor="search" className="visually-hidden">Search</label>
       <input
-         class="form-control"
+         className="form-control"
+         data-testid={`input-${props.name}`}
         {...inputProps}
         onChange={onChange}
         onFocus={handleFocus}
         focused={focused.toString()}
        
       />
-      <span>{errorMessage}</span>
+      <span data-testid={`errormessage-${props.name}`} >{errorMessage}</span>
     </div>
   );
 };
