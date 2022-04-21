@@ -1,6 +1,6 @@
 
 /** 
- * This Object will give as axios instanse with basic URI information configuration needed all ove the application
+ * This Object will give as Graphql instanse with basic URI information configuration needed all over the application
  * */
 
 import { GraphQLClient } from 'graphql-request'

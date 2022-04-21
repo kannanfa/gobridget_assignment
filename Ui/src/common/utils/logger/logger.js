@@ -22,7 +22,6 @@ class Logger{
             errorStack,
             component
         })
-        console.log(err)
         Logger.Logs.push(err);
     }
     errorBoundry = (errorStack, component=null) =>{

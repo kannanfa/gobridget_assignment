@@ -23,7 +23,6 @@ export const LoaderMessage = () => {
  */
 export const ErrorMessage = () => {
   const { isLoading, searchText, images, error } = useImageStore();
-  console.log(isLoading, searchText, images, error,"ErrorMessage, ::::::::::::::::::::::::::::")
   if (!isLoading && searchText?.length && images.size === 0) {
     let message = ` Unable to find the images`;
     if(error && error.get('message')){
